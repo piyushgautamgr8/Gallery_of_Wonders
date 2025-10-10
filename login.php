@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($found && password_verify($pass, $found['password'])) {
             unset($found['password']);
             $_SESSION['user'] = $found;
+            $_SESSION['user_id'] = $found['id'];
             header('Location: index.php'); exit;
         } else {
             $errors[] = "Invalid credentials";
