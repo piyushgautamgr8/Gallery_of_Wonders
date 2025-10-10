@@ -41,3 +41,230 @@ h2{margin-top:24px}
   .site-header .container{flex-direction:column; align-items:flex-start}
   .site-header nav{margin-top:8px}
 }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-warning { background-color: #f1c40f; }
+.btn-danger { background-color: #e74c3c; }
+.btn-primary { background-color: #6c5ce7; }
+
+.btn:hover { opacity: 0.85; }
+
+.table img {
+  border: 2px solid #ddd;
+  padding: 3px;
+  transition: transform 0.2s;
+}
+
+.table img:hover {
+  transform: scale(1.4);
+  border-color: #6c5ce7;
+}
+
+.work-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.work-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.work-media img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;      /* ✅ Limits how wide the image can get */
+  max-height: 400px;     /* ✅ Prevents it from being too tall */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .work-media img {
+    max-width: 100%;
+    max-height: 250px;
+  }
+}
+
+/* ---------- Lightbox Styles (with animation) ---------- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.show {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.show .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lightbox .close:hover {
+  color: #ccc;
+}
+
+/* Hover zoom */
+.hover-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Lightbox styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+.lightbox-inner {
+  position: relative;
+  max-width: 90%;
+}
+.lightbox-content {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: zoomIn 0.3s ease;
+}
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.caption {
+  margin-top: 15px;
+  color: #f1f1f1;
+}
+.caption h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.caption p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@keyframes zoomIn {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.btn-like {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.heart {
+  color: #aaa;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.heart.liked {
+  color: #e74c3c; /* red like Instagram */
+  transform: scale(1.2);
+}
+
+.btn-like:hover .heart {
+  color: #e74c3c;
+  transform: scale(1.2);
+}
+
