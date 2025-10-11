@@ -33,6 +33,9 @@ gallery_of_wonders/
 ├── upload.php              # Upload creative works
 ├── dashboard.php           # User dashboard
 ├── view_work.php           # View single work details
+├── explore.php             # Explore Page
+├── my_collections.php      # My Collection Page
+├── Saved_works.php         # Saved Webpage
 │
 ├── includes/
 │   ├── db_connect.php      # Database connection
